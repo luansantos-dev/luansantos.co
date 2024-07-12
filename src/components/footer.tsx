@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={`${styles.footer}`} aria-label="Rodapé do site">
       <div className={`${styles.container} container`}>
         <p>Luan Santos - {newYear.getFullYear()}</p>
-        <ul className={styles.social}>
+        {/* <ul className={styles.social}>
           <li>
             <a
               href="mailto:luansantos.dev@gmail.com"
@@ -44,7 +44,7 @@ const Footer = () => {
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </footer>
   );

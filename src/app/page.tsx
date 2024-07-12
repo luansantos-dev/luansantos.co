@@ -81,7 +81,7 @@ export default function HomePage() {
 
         <div className={`${styles.basic} animeLeft`}>
           <p>and also...</p>
-          <ul>
+          {/* <ul>
             <li>
               <ion-icon name="logo-html5"></ion-icon>
             </li>
@@ -100,7 +100,7 @@ export default function HomePage() {
             <li>
               <ion-icon name="logo-figma"></ion-icon>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </section>
