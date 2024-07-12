@@ -52,7 +52,7 @@ export default function HomePage() {
   return (
       <main className={styles.main}>
         <section className={`${styles.about} container animeSection`}>
-          <h1 className={styles.title}>Hey, I'm Luan 👋</h1>
+          <h1 className={styles.title}>{"Hey, I'm Luan 👋"}</h1>
           <p className={styles.subtitle}>
             Front-end Developer with 7+ years of Web Development experience and
             <strong className={`${styles.strong}`}>iOS Developer.</strong>
