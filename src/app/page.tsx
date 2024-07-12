@@ -1,95 +1,109 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 
-export default function Home() {
+/* Images */
+import firebase from "@/assets/firebase.svg";
+import javascript from "@/assets/javascript.svg";
+import react from "@/assets/react.svg";
+import swift from "@/assets/swift.svg";
+import swiftui from "@/assets/swiftui.svg";
+import vue from "@/assets/vuejs.svg";
+import Image from "next/image";
+
+const skills = [
+  {
+    title: "Javascript",
+    img: javascript,
+    background: "#1a1a1a",
+    color: "#797979",
+  },
+  {
+    title: "React JS",
+    img: react,
+    background: "#1a1a1a",
+    color: "#797979",
+  },
+  {
+    title: "Vue JS",
+    img: vue,
+    background: "#1a1a1a",
+    color: "#797979",
+  },
+  {
+    title: "Swift",
+    img: swift,
+    background: "#1a1a1a",
+    color: "#797979",
+  },
+  {
+    title: "SwiftUI",
+    img: swiftui,
+    background: "#1a1a1a",
+    color: "#797979",
+  },
+  {
+    title: "Firebase",
+    img: firebase,
+    background: "#1a1a1a",
+    color: "#797979",
+  },
+];
+
+export default function HomePage() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <main className={styles.main}>
+        <section className={`${styles.about} container animeSection`}>
+          <h1 className={styles.title}>Hey, I'm Luan 👋</h1>
+          <p className={styles.subtitle}>
+            Front-end Developer with 7+ years of Web Development experience and
+            <strong className={`${styles.strong}`}>iOS Developer.</strong>
+          </p>
+        </section>
+        <section className={`${styles.skills} animeItem`}>
+      <div className={`${styles.skills__content} container`}>
+        <div className={styles.description}>
+          <p>Skills</p>
+          <span>
+            Hard skills I got and main technologies used in my studies and
+            works.
+          </span>
+        </div>
+
+        <div className={styles.skills__images}>
+          {skills.map((item, index) => (
+            <div className={styles.tecnology} key={index}>
+              <div style={{ background: item.background }}>
+                <Image src={item.img} alt={item.title} />
+                <h4 style={{ color: item.color }}>{item.title}</h4>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className={`${styles.basic} animeLeft`}>
+          <p>and also...</p>
+          <ul>
+            <li>
+              <ion-icon name="logo-html5"></ion-icon>
+            </li>
+            <li>
+              <ion-icon name="logo-css3"></ion-icon>
+            </li>
+            <li>
+              <ion-icon name="logo-github"></ion-icon>
+            </li>
+            <li>
+              <ion-icon name="logo-wordpress"></ion-icon>
+            </li>
+            <li>
+              <ion-icon name="logo-sass"></ion-icon>
+            </li>
+            <li>
+              <ion-icon name="logo-figma"></ion-icon>
+            </li>
+          </ul>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </section>
+      </main>
   );
 }
